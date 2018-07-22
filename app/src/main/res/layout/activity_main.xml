@@ -36,12 +36,11 @@
         android:text="@string/buscar_menu" />
 
     <EditText
-        android:id="@id/multiText"
+        android:id="@+id/multiText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
-        android:lines="5"
-        android:text="@string/ingrese_su_pedido_detallado" />
+        android:lines="5" />
 
     <RadioGroup
         android:layout_width="match_parent"
