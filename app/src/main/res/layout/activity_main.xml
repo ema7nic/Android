@@ -30,7 +30,7 @@
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/btnAddProducto"
+        android:id="@+id/btnBuscarProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/buscar_menu" />
@@ -40,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
-        android:lines="5" />
+        android:lines="5"
+        tools:ignore="LabelFor" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -103,7 +104,7 @@
     <LinearLayout
         android:id="@+id/loyoutBotonera"
         android:layout_width="match_parent"
-        android:layout_height="189dp"
+        android:layout_height="98dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -112,15 +113,13 @@
             android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:text="@string/confirmar"
-            tools:ignore="ButtonStyle"
-            style="?android:buttonBarButtonStyle"/>
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/btnCancelar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cancelar"
-            style="?android:buttonBarButtonStyle"/>
+            android:text="@string/cancelar" />
 
     </LinearLayout>
 
