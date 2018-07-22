@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tit_main_activity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        tools:text="@string/lblNombreCliente" />
+
+    <EditText
+        android:id="@+id/txtNombreCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/nombre"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btnAddProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buscar_menu" />
+
+    <EditText
+        android:id="@id/multiText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:text="@string/ingrese_su_pedido_detallado" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radBtnMesa"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:text="@string/envio_a_domicilio" />
+
+        <RadioButton
+            android:id="@+id/radBtnDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reservar_mesa" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/loyoutCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbIncluirPropina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incluir_propinas" />
+
+        <CheckBox
+            android:id="@+id/cbPermitirCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permitir_cancelar" />
+
+        <CheckBox
+            android:id="@+id/cbBebidaXL"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bebida_xl" />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/swtNotificationes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:switchMinWidth="@android:dimen/thumbnail_height"
+        android:switchTextAppearance="@style/TextAppearance.AppCompat"
+        android:text="@string/notificar_confirmacion"
+        tools:checked="false" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false" />
+
+    <LinearLayout
+        android:id="@+id/loyoutBotonera"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmar"
+            tools:ignore="ButtonStyle"
+            style="?android:buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            style="?android:buttonBarButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>
