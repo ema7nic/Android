@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.MessageFormat;
+
 import ofa.cursos.android.app01.myresto.modelo.DetallePedido;
 import ofa.cursos.android.app01.myresto.modelo.Pedido;
 import ofa.cursos.android.app01.myresto.modelo.PedidoDAO;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtNombre;
     private Pedido pedidoActual;
     private PedidoDAO pedidoDao;
+    private Double total = 0.0;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
@@ -35,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 detalle.setProductoPedido(prod);
                 pedidoActual.addItemDetalle(detalle);
                 EditText txtDetalle = findViewById(R.id.multiText);
+                TextView txtTotal = findViewById(R.id.textTotal);
+
+                total += prod.getPrecio()*cantidad;
+                txtTotal.setText(MessageFormat.format("Total: {0}", total.toString()));
                 txtDetalle.setText(
-                        txtDetalle.getText()
-                        .append(
-                                prod.getNombre()+ " $"+
-                                        (prod.getPrecio()*cantidad)+"\r\n"
-                        ).toString()
+                        txtDetalle.getText().append(prod.getNombre()).append(" $").append(String.valueOf(prod.getPrecio() * cantidad)).append("\r\n").toString()
                 );
             }
         }

@@ -11,6 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import ofa.cursos.android.app01.myresto.modelo.DetallePedido;
 import ofa.cursos.android.app01.myresto.modelo.ProductoDAOMemory;
 import ofa.cursos.android.app01.myresto.modelo.ProductoDao;
@@ -67,6 +69,9 @@ public class DetallePedidoActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (cantidadProducto > 0) {
                             cantidadProducto--;
+                            if(cantidadProducto==0){
+                                btnAgregarProducto.setEnabled(false);
+                            }
                             txtCantidad.setText(cantidadProducto.toString());
                         }
 
@@ -78,6 +83,7 @@ public class DetallePedidoActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         cantidadProducto++;
+                        btnAgregarProducto.setEnabled(true);
                         txtCantidad.setText(cantidadProducto.toString());
                     }
                 });

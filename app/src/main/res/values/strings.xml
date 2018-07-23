@@ -19,5 +19,5 @@
     <string name="cantidad_productos">0</string>
     <string name="agregar_productos">Agregar Productos</string>
     <string name="buscar_menu">Buscar Menu</string>
-
+    <string name="total">Total:</string>
 </resources>

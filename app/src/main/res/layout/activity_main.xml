@@ -43,6 +43,13 @@
         android:lines="5"
         tools:ignore="LabelFor" />
 
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
